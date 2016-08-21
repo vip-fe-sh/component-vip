@@ -1,0 +1,9 @@
+<div class="dropdown" v-bind:class="{ 'open': isOpen}">
+  <button class="btn btn-default" type="button" v-on:click="toggle()" v-model="dropdownValue">
+    {{dropdownValue}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#" v-on:click="click(option.value, option.id)" v-for="option in options">{{option.value}}</a></li>
+  </ul>
+</div>
