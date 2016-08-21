@@ -1,11 +1,13 @@
 import Vue from 'vue';
 import vueSelect from '../vueSelect/';
+import vueModal from '../vueModal/';
 import {initSpinner} from '../../utils/utils.js';
 
 export default Vue.extend({
   template: require('./index.html'),
   components: {
-    'vue-select': vueSelect
+    'vue-select': vueSelect,
+    'vue-modal': vueModal
   },
   data () {
     return {
@@ -22,7 +24,12 @@ export default Vue.extend({
           id: 3,
           value: '鞋包'
         }
-      ]
+      ],
+      modal: {
+        myShow: false,
+        title: '',
+        myBody: '<div>this is my body</div>'
+      }
     };
   },
   ready () {
@@ -38,5 +45,16 @@ export default Vue.extend({
     }, (err) => {
       window.alert(err);
     });
+  },
+  methods: {
+    myClick (v) {
+      this.modal.myShow = v;
+      this.modal.title = 'vip-modal';
+    }
+  },
+  watch: {
+    'modal.myShow': (cdata) => {
+      console.log(cdata);
+    }
   }
 });

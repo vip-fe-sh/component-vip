@@ -1,7 +1,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-1">
+      <div class="h5">下拉菜单:</div>
+    </div>
+    <div class="col-md-1">
       <vue-select :options="options"></vue-select>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-1">
+      <div class="h5">弹窗:</div>
+    </div>
+    <div class="col-md-1">
+      <button class="btn btn-default" type="submit" v-on:click="myClick" :model="modal.myShow">modal</button>
+      <vue-modal :show="modal.myShow" :title="modal.title" :body="modal.myBody"></vue-modal>
     </div>
   </div>
   <div id="spin" class="spin"></div>

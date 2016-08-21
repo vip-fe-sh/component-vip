@@ -1,5 +1,5 @@
 <div class="dropdown" v-bind:class="{ 'open': isOpen}">
-  <button class="btn btn-default" type="button" v-on:click="toggle()" v-model="dropdownValue">
+  <button class="btn btn-default" type="button" v-on:click="toggle()" :model="dropdownValue">
     {{dropdownValue}}
     <span class="caret"></span>
   </button>
