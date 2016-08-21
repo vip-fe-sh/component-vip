@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import './index.scss';
 import vueSelect from '../vueSelect/';
 import vueModal from '../vueModal/';
 import {initSpinner} from '../../utils/utils.js';
