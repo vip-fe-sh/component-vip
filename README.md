@@ -1,0 +1,1 @@
+VIP component  extend bootstrap
