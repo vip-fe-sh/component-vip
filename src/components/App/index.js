@@ -2,13 +2,15 @@ import Vue from 'vue';
 import './index.scss';
 import vueSelect from '../vueSelect/';
 import vueModal from '../vueModal/';
+import vueNav from '../vueNav/';
 import {initSpinner} from '../../utils/utils.js';
 
 export default Vue.extend({
   template: require('./index.html'),
   components: {
     'vue-select': vueSelect,
-    'vue-modal': vueModal
+    'vue-modal': vueModal,
+    'vue-nav': vueNav
   },
   data () {
     return {
@@ -30,7 +32,21 @@ export default Vue.extend({
         myShow: false,
         title: '',
         myBody: '<div>this is my body</div>'
-      }
+      },
+      navs: [
+        {
+          id: 1,
+          value: '选项一'
+        },
+        {
+          id: 2,
+          value: '选项二'
+        },
+        {
+          id: 3,
+          value: '选项三'
+        }
+      ]
     };
   },
   ready () {

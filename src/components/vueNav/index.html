@@ -1,0 +1,5 @@
+<ul class="nav nav-tabs">
+  <li role="presentation" v-bind:class="{active:cur==$index}" v-on:click="cur=$index" v-for="nav in navs">
+    <a href="#">{{nav.value}}</a>
+  </li>
+</ul>
